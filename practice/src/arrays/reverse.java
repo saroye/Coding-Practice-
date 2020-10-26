@@ -1,7 +1,11 @@
-package coding;
+package arrays;
 
 import java.util.Arrays;
 
+/**
+ * reverse the given string
+ * @author Saroye
+ */
 public class reverse {
 	
 	public int[] rev(int[] ar) {
