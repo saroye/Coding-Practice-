@@ -1,6 +1,6 @@
 # Coding Practice
 
-# These are some example problems to prepare for job interviews and brush up concepts for:
+## These are some example problems to prepare for job interviews and brush up concepts for:
 ### Data Structures 
 ### Searchign and Sorting Algos
 ### Dynamic Programming
@@ -12,3 +12,6 @@
 ### Greedy Algos
 ### BackTracking
 ### Heap
+### Graph
+### Trie
+### Bit Manipulation
