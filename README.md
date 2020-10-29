@@ -15,3 +15,5 @@
 ### Graph
 ### Trie
 ### Bit Manipulation
+
+Where Some of the topics are already cover, and I will be updated this repo weekly. 
