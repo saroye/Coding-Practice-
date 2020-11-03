@@ -24,6 +24,9 @@ public class knapsack {
 	public static void main(String[] args) {
 		
 		knapsack k = new knapsack();
+		int [] wt = new int [] {2,3,4,5};
+		int [] val = new int [] {1,2,3,4};
+		System.out.println(k.knapsack(wt, val, 11, 4));
 	}
 
 }

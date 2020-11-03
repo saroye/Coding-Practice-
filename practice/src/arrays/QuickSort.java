@@ -1,4 +1,4 @@
-package Interview;
+package arrays;
 
 import java.util.Arrays;
 
@@ -8,7 +8,8 @@ public class QuickSort {
 	{ 
 		int pivot = arr[high];  
 		int i = (low-1);
-		for (int j=low; j<high; j++) {	 
+		for (int j=low; j<high; j++) 
+		{	 
 			if (arr[j] < pivot) { 
 				i++;  
 				int temp = arr[i]; 
@@ -34,7 +35,7 @@ public class QuickSort {
 
 	public static void main(String args[]) { 
 		
-		int arr[] = {10, 7, 8, 9, 1, 5}; 
+		int[] arr= {10, 7, 8, 9, 1, 5,10,4,20,14,25,12,18,16,30,22,55,66,44,33}; 
 		int n = arr.length; 
 		QuickSort ob = new QuickSort(); 
 		ob.sort(arr, 0, n-1); 
