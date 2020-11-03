@@ -1,4 +1,4 @@
-package micellaneous;
+package Interview;
 import java.util.Arrays;
 
 public class BinarySearch {
