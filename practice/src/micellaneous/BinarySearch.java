@@ -1,4 +1,4 @@
-package Guide;
+package micellaneous;
 import java.util.Arrays;
 
 public class BinarySearch {
