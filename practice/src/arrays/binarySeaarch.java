@@ -6,11 +6,7 @@ import java.util.Arrays;
  * 
  * sorted array is given find the position of the given node in array.
  * @author Saroye
- * SELECT ROUND(AVG(grade), 0), COUNT(task_name)>3 FROM survey group by task_name;
- *
- *	
-	SELECT * FROM survey ORDER BY task_name;
-
+ * 
  */
 public class binarySeaarch {
 
