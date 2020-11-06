@@ -55,7 +55,7 @@ public class occurence {
 	
 	public static void main(String[] args) {
 		occurence o = new occurence();	
-		o.first_occurence(new int[] {0,1,2,4,4,4,4,4,4,4,4,5,5,5,5,5,5,6,7,8,9,10}, 4);
-		o.last_occurence(new int[] {0,1,2,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,6,7,8,9,10}, 5);
+		System.out.println(o.first_occurence(new int[] {0,1,2,4,4,4,4,4,4,4,4,5,5,5,5,5,5,6,7,8,9,10}, 4));
+		System.out.println(o.last_occurence(new int[] {0,1,2,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,6,7,8,9,10}, 5));
 	}
 }
