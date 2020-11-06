@@ -29,8 +29,8 @@ public class kthElement {
 	
 	public int kSmallestValue(int[] ar, int k) {
 		
-		//PriorityQueue<Integer> maxHeap =new PriorityQueue<>(Collections.reverseOrder()); 
-		PriorityQueue<Integer> maxHeap =new PriorityQueue<>((a,b) -> b - a); 
+		PriorityQueue<Integer> maxHeap =new PriorityQueue<>(Collections.reverseOrder()); 
+		//PriorityQueue<Integer> maxHeap =new PriorityQueue<>((a,b) -> b - a); 
 		for(int i=0; i<ar.length; i++) {
 			maxHeap.add(ar[i]);
 			if(maxHeap.size() >k) {
