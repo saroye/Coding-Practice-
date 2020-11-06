@@ -31,7 +31,7 @@ public class maxMin {
 	public static void main(String [] args) {
 		
 		maxMin mm = new maxMin();
-		System.out.println(mm.max(new int []{1,2,3,4,5,6,7,8,9,10,11}));
-		System.out.println(mm.min(new int []{1,2,3,4,5,6,7,8,9,10,11}));
+		System.out.println(mm.max(new int []{21,2,3,4,5,6,7,8,9,10,11}));
+		System.out.println(mm.min(new int []{1,2,3,4,5,6,7,8,9,10,11,0}));
 	}
 }
