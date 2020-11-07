@@ -17,8 +17,6 @@ public class rodCutting {
 			max_val = Math.max(max_val,price[i] + max(price, n-i-1));
 		}
 		return max_val;
-
-
 	}
 
 

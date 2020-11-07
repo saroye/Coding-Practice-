@@ -39,11 +39,11 @@ public class connectRopes {
 		PriorityQueue<Integer> maxnHeap = new PriorityQueue<>((a,b) -> b - a); 
 		int cost=0;
 		int elt1=0, elt2=0;
+		
 		for(int i=0; i<ar.length; i++) {
 			maxnHeap.add(ar[i]);
 		}
 		while(maxnHeap.size()>=2) {
-
 			elt1=maxnHeap.poll();
 			elt2=maxnHeap.poll();
 			cost=cost+elt1+elt2;
@@ -58,7 +58,7 @@ public class connectRopes {
 
 		connectRopes c = new connectRopes();
 
-		int[] ar= new int[] {1,5,2,4,3};
+		int[] ar= new int[] {1,2,3,4,5};
 		System.out.println("Min Cost: "+c.minCost(ar));
 		System.out.println("Max Cost: "+c.maxCost(ar));
 		Arrays.sort(ar);
