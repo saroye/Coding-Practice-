@@ -11,13 +11,10 @@ public class mock {
 	 */
 	
 	public int[][] flipAndInvertImage(int[][] A) {
+		
 		int len=A[0].length-1;
 		int temp=0;
 		
-		/**
-		 * 
-		 */
-		int[][] ar = new int[A.length][A[0].length];
 		for( int i=0; i<A.length; i++) {
 			for( int j=0; j<A[0].length/2; j++) {
 				temp=A[i][len-j];
@@ -47,7 +44,7 @@ public class mock {
 	
 	public static void main(String[] args) {
 		mock m = new mock();
-		int[][] ar= new int[][] {{1,1,0,0,1},{1,0,1,0,0},{1,1,0,0,0}};
+		int[][] ar= new int[][] {{1,1,0,0,1,0,1,1},{1,0,1,0,0},{1,1,0,0,0}};
 		System.out.println(Arrays.toString(ar[0]));
 		System.out.println(Arrays.toString(ar[1]));
 		System.out.println(Arrays.toString(ar[2]));
