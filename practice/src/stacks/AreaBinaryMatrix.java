@@ -5,7 +5,7 @@ import java.util.Stack;
 
 public class AreaBinaryMatrix {
 
-	public void areaOfBinary(int[][] ar) {
+	public int areaOfBinary(int[][] ar) {
 		int[] h1=new int[ar[0].length];
 		int max=0;
 		for(int i=0; i<ar[0].length; i++) {
@@ -24,8 +24,11 @@ public class AreaBinaryMatrix {
 				}
 			}
 			System.out.println("***************");
-			max=maxArea(h1);
+			if(maxArea(h1)> max) {
+				max=maxArea(h1);
+			}
 		}
+		return max;
 	}
 	public int maxArea(int[] ar) {
 		int[] left=leftSide(ar);
@@ -114,7 +117,7 @@ public class AreaBinaryMatrix {
 		}
 
 		System.out.println("***************");
-		a.areaOfBinary(ar);
+		System.out.println("MAX AREA OF MATRIX IS: "+a.areaOfBinary(ar));
 
 	}
 
