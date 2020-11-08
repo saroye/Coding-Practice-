@@ -115,7 +115,7 @@ public class NextLargestElement {
 					ans[i]=-1;
 				}
 				else {
-					ans[i]=s.peek();
+					ans[i]=s.peek(); 
 				}
 			}
 			s.push(ar[i]);
@@ -127,7 +127,7 @@ public class NextLargestElement {
 	public static void main(String[] args) {
 		
 		NextLargestElement g = new NextLargestElement();
-		int[] ar =new int[] {4,5,2,10,8};
+		int[] ar =new int[] {6,2,5,4,5,1,6};
 		System.out.println("Given array for nearest:  "+Arrays.toString(ar));
 		g.nearestGreatertoRight(ar);
 		g.nearestGreatertoLeft(ar);
