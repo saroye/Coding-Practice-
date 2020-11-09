@@ -2,7 +2,15 @@ package stacks;
 
 import java.util.Arrays;
 import java.util.Stack;
-
+/**
+ * 
+ * 
+ * @author Saroye
+ *
+ *	a binary matrix is given. 
+ *	calculate the max area in the whole matrix
+ *
+ */
 public class AreaBinaryMatrix {
 
 	public int areaOfBinary(int[][] ar) {
@@ -23,12 +31,13 @@ public class AreaBinaryMatrix {
 					h1[j]=0;
 				}
 			}
-			System.out.println("***************");
+			System.out.println("***************************");
+			System.out.println("Histo:  "+ Arrays.toString(h1));
 			if(maxArea(h1)> max) {
 				max=maxArea(h1);
 			}
 		}
-		return max;
+		return max; 
 	}
 	public int maxArea(int[] ar) {
 		int[] left=leftSide(ar);
@@ -47,9 +56,9 @@ public class AreaBinaryMatrix {
 			}
 		}
 		System.out.println("Width:  "+Arrays.toString(width));
-		System.out.println("======");
+		System.out.println("========");
 		System.out.println("Area:   "+Arrays.toString(area));
-		System.out.println("======");
+		System.out.println("========");
 		System.out.println("MaxAr:  "+maxArea);
 		return maxArea;
 	}
@@ -111,7 +120,12 @@ public class AreaBinaryMatrix {
 	public static void main(String[] args) {
 
 		AreaBinaryMatrix a = new AreaBinaryMatrix();
-		int[][] ar= new int[][] {{0,1,1,0}, {1,1,1,1},{1,1,1,1},{1,1,0,0}};
+		int[][] ar= new int[][] {
+				{0,1,1,0}, 
+				{1,1,1,1},
+				{1,1,1,1},
+				{1,1,0,0}
+			};
 		for(int i=0; i<ar.length; i++) {
 			System.out.println(Arrays.toString(ar[i]));
 		}

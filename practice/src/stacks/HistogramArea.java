@@ -17,13 +17,16 @@ public class HistogramArea {
 		int[] left=leftSide(ar);
 		int[] right=rightSide(ar);
 		int[] area=new int[ar.length];
+		int[] width =new int[ar.length];
+		
 		System.out.println("Left:   "+ Arrays.toString(left));
 		System.out.println("Right:  "+ Arrays.toString(right));
 		int maxArea=0;
-		int[] width =new int[ar.length];
+		
 		for(int i =0; i<width.length; i++){
 			width[i]=(right[i]-left[i])-1;
 		}
+		
 		System.out.println("Width:  "+ Arrays.toString(width));
 		for(int i=0; i<ar.length; i++) {
 			area[i]=ar[i]*((right[i]-left[i])-1);
@@ -59,7 +62,6 @@ public class HistogramArea {
 				}
 			}
 			s.push(new pair(i, ar[i]));
-
 		}
 		return l;
 	}

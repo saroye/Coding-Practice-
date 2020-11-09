@@ -17,7 +17,7 @@ public class MergeSort {
 		       Arr[ k++] = A[ center++] ;
 		    }
 
-		   else if ( center > end)  {
+		   else if ( center > end)  { 
 		       Arr[k++] = A[first++];
 		   }
 

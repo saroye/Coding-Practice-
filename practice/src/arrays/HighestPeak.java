@@ -27,7 +27,7 @@ package arrays;
  * @author Saroye
  *
  */
-public class HighestPeak {
+public class HighestPeak { 
 	
 	
 	public static void main(String[] args ) {

@@ -10,7 +10,7 @@ public class maxEltinBitonic {
 	}
 	
 	public static void main(String[] args) {
-		
+		 
 		maxEltinBitonic b = new maxEltinBitonic();
 		
 	}
