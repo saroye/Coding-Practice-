@@ -12,11 +12,24 @@ import java.util.Arrays;
 public class countOfSubset {
 	
 	
-	public boolean subsetCount(int[] ar, int sum, int n) {
+	public int subsetCount(int[] ar, int sum, int n) {
+		int[][] t= new int[ar.length+1][sum+1];
 		
+		for(int i=0; i<t.length; i++) {
+			t[i][0]=0;
+		}
+		for(int j=0; j<t.length; j++) {
+			t[j][0]=1;
+		}
+		for(int i=0; i<t.length; i++) {
+			for(int j=1; j<t[0].length; j++) {
+				if(ar[i-1]<=j) {
+					
+				}
+			}
+		}
 		
-		
-		return false;
+		return 0;
 	}
 	
 	
