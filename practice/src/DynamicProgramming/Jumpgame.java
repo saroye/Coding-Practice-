@@ -1,7 +1,13 @@
 package DynamicProgramming;
 
 import java.util.Arrays;
-
+/**
+ * 
+ * @author Saroye
+ *
+ *	minimum number of jump to reach the last element of the array
+ *	where each node is a value to take that jump
+ */
 public class Jumpgame {
 	
 	
@@ -17,7 +23,7 @@ public class Jumpgame {
 				if(i==0 || j==0) {
 					t[i][j]=0;
 				}
-				else if(ar[i-1] <=j) {
+				else if(ar[i-1] ==j) {
 					t[i][j]=max(
 							ar[i-1]+t[i-1][j-ar[i-1]],
 							t[i-1][j]);
@@ -44,6 +50,7 @@ public class Jumpgame {
 		int[] ar= new int[] {2,3,1,1,4};
 		
 		Jumpgame j = new Jumpgame();
+		System.out.println("Array: "+Arrays.toString(ar));
 		System.out.println(j.minSteps(ar));
 	}
 
