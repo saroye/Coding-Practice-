@@ -1,29 +1,41 @@
 package arrays;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class kadanesAlgo {
-	
-	public int[] contiguousAr(int[] ar) {
-		int[] ans= new int[1];
-		ArrayList<Integer> temp1 = new ArrayList<Integer>();
-		ArrayList<Integer> current = new ArrayList<Integer>();
-		int sum=0, cur_sum=0;
+
+	public int maxSubArraySum(int[] a) {
+
+		int max_cur = Integer.MIN_VALUE, max = 0; 
+		//ArrayList<Integer> subset= new ArrayList<Integer>();
 		
-		for(int i=0; i<ar.length; i++) {
-			cur_sum=cur_sum+ar[i];
-			if(cur_sum>sum) {
-				
+		for (int i = 0; i < a.length; i++) 
+		{ 
+			max = max + a[i]; 
+			//subset.add(a[i]);
+			if (max_cur < max) {
+				max_cur = max; 
 			}
-			
-		}
-			
-		
-		return ans;
+			if (max < 0) {
+				//subset.clear();
+				max = 0; 
+			}
+		} 
+//		int[] ar= new int[subset.size()];
+//		for(int i=0; i<subset.size(); i++) {
+//			ar[i]=subset.get(i);
+//		}
+//		System.out.println(Arrays.toString(ar));
+		return max_cur; 
 	}
-	
+
 	public static void main(String[] args) {
 		kadanesAlgo k = new kadanesAlgo();
+		int [] a = {-2, -3, 4, -1, -2, 1, 5, -3}; 
+		System.out.println("Array: "+Arrays.toString(a));
+		System.out.println("Maximum contiguous sum is " + k.maxSubArraySum(a)); 
 	}
 
 }

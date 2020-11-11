@@ -18,6 +18,7 @@ public class practice {
 		result[0]=0;
 		if(target==n) return new int[] {0,0};		
 		
+		System.out.println("Asked sum: "+ n);
 		for(int i=1; i<ar.length; i++) {
 			
 			if(target<n)
@@ -38,7 +39,7 @@ public class practice {
 			if(target==n)
 			{
 				result[1]=i;
-				System.out.println(Arrays.toString(result)+ " i: "+i);
+				System.out.println("The indexes of array is: "+Arrays.toString(result)+ " and the sum is: "+target);
 				return result;	
 			}
 		}
@@ -50,7 +51,9 @@ public class practice {
 	public static void main(String [] args) {
 		
 		practice p = new practice();
-		System.out.println(Arrays.toString(p.m1(new int[] {1,2,3,4,5}, 12)));
+		int[] ar = new int[] {1,2,3,4,5};
+		System.out.println(Arrays.toString(ar));
+		p.m1(ar, 12);
 		
 	}
 

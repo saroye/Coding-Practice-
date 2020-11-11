@@ -21,19 +21,6 @@ public class BinarySearch {
 //			return true;
 	//
 //		}
-
-		public boolean solution(int[] A, int K){
-
-
-			if(K>A[A.length-1]) return false;
-
-			for(int i=1; i<=K; i++){
-
-				if(!bs(A, i))	return false;
-			}
-			return true;
-		}
-		
 		
 		public boolean bs(int[] ar, int n) {
 			
@@ -57,8 +44,6 @@ public class BinarySearch {
 
 		public static void main(String [] args) {
 			BinarySearch b = new BinarySearch();
-
-			System.out.println(b.solution(new int []{1, 1,3, 3}, 2));
 			System.out.println(b.bs(new int []{1, 1,3, 3}, 2));
 
 		}
