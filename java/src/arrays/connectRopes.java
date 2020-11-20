@@ -49,15 +49,12 @@ public class connectRopes {
 			cost=cost+elt1+elt2;
 			maxnHeap.add(elt1+elt2);
 		}
-
 		return cost;
 	}
-
 
 	public static void main(String[] args) {
 
 		connectRopes c = new connectRopes();
-
 		int[] ar= new int[] {1,2,3,4,5};
 		System.out.println("Min Cost: "+c.minCost(ar));
 		System.out.println("Max Cost: "+c.maxCost(ar));
