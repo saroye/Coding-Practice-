@@ -42,7 +42,7 @@ public class knapsack {
 				else if(wt[i-1] <=j) {
 					t[i][j]=max
 							(
-								val[i-1] +t[i-1][j-wt[i-1]],
+								val[i-1] + t[i-1][j-wt[i-1]],
 								t[i-1][j]
 							);
 				}

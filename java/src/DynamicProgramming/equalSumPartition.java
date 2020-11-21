@@ -6,7 +6,7 @@ import java.util.Arrays;
  * @author Saroye
  *	
  *	given an array: divide in two subset
- * 	so that both of the subset have same similar
+ * 	so that both of the subset have same sum
  * 	return true or false;
  */
 

@@ -40,17 +40,13 @@ public class subsetSum {
 		}
 		for(int i=1; i<t.length; i++) {
 			for(int j=1; j<t[i].length; j++) {
-
-				if(ar[i-1]<=j) {
+				if(j>=ar[i-1]) {
 					t[i][j]= 
-							(
-								t[i][j-ar[i-1]] 
-								||
-								t[i-1][j]
-							);
+							(t[i-1][j-ar[i-1]] ||	
+							 t[i-1][j]);
 				}
 				else {
-					t[i][j]=t[i][j-1];
+					t[i][j]=t[i-1][j];
 				}
 			}
 		}
@@ -64,7 +60,7 @@ public class subsetSum {
 	public static void main(String[] args) {
 		subsetSum s = new subsetSum();
 		int [] val = new int [] {1,3,4,10};
-		int n=12;
+		int n=16;
 		System.out.println("Array: 	   "+Arrays.toString(val));
 		System.out.println("sum: 	   "+n);
 		System.out.println("Recursive: "+s.isSubsetSum(val,val.length, n));
