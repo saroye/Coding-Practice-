@@ -16,4 +16,4 @@
 ### Trie
 ### Bit Manipulation
 
-#### Some of the topics are already cover. I will be updating this repository weekly and add different topics and problems, based on topics coveringdifferent data structures and unique problems.
+#### Some of the topics are already cover. I will be updating this repository weekly and add different topics and problems, based on topics covering different data structures and unique problems.
