@@ -64,7 +64,7 @@ public class videoBuffering {
 			}
 			if(buffer_good==false) {
 				if(nxt_buffer.peek()==last_buffer+1) {
-					System.out.println("Next from packets: "+packets[Buffer_size]);
+					System.out.println("Next from packets: "+nxt_buffer.peek());
 					buffer_counter++;
 				}
 				else {
@@ -75,6 +75,8 @@ public class videoBuffering {
 			else {
 				System.out.println("buffer_counter: "+buffer_counter);
 				buffer=this.updateBuffer(packets, buffer,arrivalRate,Buffer_size,last_buffer);
+				
+				nxt_buffer=this.updateBuffer(packets, buffer, arrivalRate, Buffer_size, buffer.peek());
 			
 				Buffer_size=(Buffer_size+arrivalRate)-1;
 			}
