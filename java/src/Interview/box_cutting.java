@@ -2,11 +2,17 @@ package Interview;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 
+ * 
+ * @author Saroye
+ *
+ */
 public class box_cutting {
 
 
 	public static int maxProfit(int costPerCut, int salePrice, List<Integer> lengths) {
-		
+//		c.maxProfit(1,10,w)
 
 		if(lengths.size()==0) return 0;
 		int left=1;

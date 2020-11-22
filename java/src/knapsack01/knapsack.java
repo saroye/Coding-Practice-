@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package knapsack01;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -68,15 +68,15 @@ public class knapsack {
 	public static void main(String[] args) {
 
 		knapsack k = new knapsack();
-		int [] wt = new int [] {1,3,4,5};
-		int [] val = new int [] {1,2,4,5};
+		int [] wt =  {1,2,3,4,5,6,7,8};
+		int [] val = {1,4,6,8,9,10,12,15};
 		int val1[] = new int[] { 60, 100, 120 }; 
 		int wt1[] = new int[] { 10, 20, 30 }; 
-		int price = 7; 
+		int price = 9; 
 		System.out.println("Weight:    "+Arrays.toString(wt));
 		System.out.println("Value:     "+Arrays.toString(val)); //knapsackItr
 		System.out.println("Price:     "+price);
-		System.out.println("Recurisve: "+k.knapsack(wt, val, price, 4));
+		System.out.println("Recurisve: "+k.knapsack(wt, val, price, val.length));
 		System.out.println("Iterative: "+k.knapsackIterative(wt, val, price,4));
 	}
 

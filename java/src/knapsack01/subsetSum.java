@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package knapsack01;
 import java.util.*;
 
 /**
@@ -31,19 +31,21 @@ public class subsetSum {
 
 	public boolean subSetSum( int[] ar, int sum) {
 		boolean[][] t =new boolean[ar.length+1][sum+1];
-		
-		for(int i=0; i<t[0].length; i++) {
-			t[0][i]=false;
-		}
+
 		for(int j=0; j<t.length; j++) {
 			t[j][0]=true;
+		}
+		for(int i=0; i<t[0].length; i++) {
+			t[0][i]=false;
 		}
 		for(int i=1; i<t.length; i++) {
 			for(int j=1; j<t[i].length; j++) {
 				if(j>=ar[i-1]) {
 					t[i][j]= 
-							(t[i-1][j-ar[i-1]] ||	
-							 t[i-1][j]);
+							(
+							t[i-1][j-ar[i-1]] 
+							||	
+							t[i-1][j]);
 				}
 				else {
 					t[i][j]=t[i-1][j];

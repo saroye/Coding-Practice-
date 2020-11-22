@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package knapsack01;
 
 import java.util.Arrays;
 
@@ -16,7 +16,7 @@ public class countOfSubset {
 		int[][] t= new int[ar.length+1][sum+1];
 		
 		for(int i=0; i<t.length; i++) {
-			t[i][0]=0;
+			t[0][i]=0;
 		}
 		for(int j=0; j<t.length; j++) {
 			t[j][0]=1;
