@@ -24,7 +24,6 @@ public class longestCommonSubsequence {
 		}
 	}
 
-
 	public int LCS_td(String s1, String s2, int n, int m) {
 		int[][] t =new int[n+1][m+1];
 		for(int i=0; i<t.length; i++) {
@@ -54,8 +53,8 @@ public class longestCommonSubsequence {
 
 	public static void main(String[] args) {
 		longestCommonSubsequence l = new longestCommonSubsequence();
-		String s1="abcgh";
-		String s2="abdeh";
+		String s1="abcgerqh";
+		String s2="abdxcgerqq";
 		System.out.println("String1: "+s1);
 		System.out.println("String2: "+s2);
 		System.out.println("Recursive Longest common subsequence: "+l.LCS(s1,s2, s1.length(),s2.length()));
