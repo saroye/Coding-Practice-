@@ -32,12 +32,17 @@ public class shortestCommonSuperSequence {
 				}
 			}
 		}
+//		for (int i = 0; i < t.length; i++) {
+//			System.out.println(Arrays.toString(t[i]));
+//			
+//		}
 		
-		super_sequence=(m+m)-t[n][m];
-		int cc=+ a.length()+b.length();
+		super_sequence=(m+n)-t[n][m];
+		int cc= a.length()+b.length();
+		System.out.println("A+B = "+ a+b+" is of length: "+cc);
 		System.out.println("String1: "+a+ "    is of length: "+a.length());
 		System.out.println("String2: "+b+ "  is of length: "+b.length());
-		System.out.println("A+B = "+ a+b+" is of length: "+cc);
+		System.out.println("Common: "+t[n][m]);
 		System.out.println("shortest supersequence: "+super_sequence);
 		return super_sequence;
 	}

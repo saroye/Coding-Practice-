@@ -2,18 +2,18 @@ package CommonSubsequence;
 
 import java.util.Arrays;
 /**
- * given 2 strings
- * longest common subsequence 
- * without caring whether it has to be continous.
- * 
+ * given a string find the longest palindrome sequence in the string.
  * @author Saroye
  *
  */
-public class longestCommonSubstring {
-
-	public int LCS(String a, String b, int n, int m) {
+public class LongestPalindromSubString {
+	public int LongestCommonSubStringPalindrome(String a, int n) {
 		int max=Integer.MIN_VALUE;
-		int[][] t =new int[n+1][m+1];
+		int[][] t =new int[n+1][n+1];
+		String b="";
+		for(int i=a.length()-1; i>=0; i--) {
+			b=b+a.charAt(i);
+		}
 		for(int i=0; i<t.length; i++) {
 			for(int j=0; j<t[i].length; j++) {
 				if(i==0 || j==0) {
@@ -41,16 +41,12 @@ public class longestCommonSubstring {
 	}
 	
 	
-	
-	
-	
 	public static void main(String[] args) {
-		longestCommonSubstring l = new longestCommonSubstring();
-		String s1="abcgerqh";
-		String s2="abdxcgerqq";
-		System.out.println("String1: "+s1);
-		System.out.println("String2: "+s2);
-		System.out.println("Longest common subsequence: "+l.LCS(s1,s2, s1.length(),s2.length()));
+		LongestPalindromSubString lpss = new LongestPalindromSubString();
+
+		String a="adjtbrxrbtkhfgoa";
+		System.out.println("String3: "+a);
+		System.out.println(lpss.LongestCommonSubStringPalindrome(a, a.length()));
 		
 	}
 }
