@@ -18,7 +18,7 @@ public class coinChange {
 		for(int j=0; j<t.length; j++) {
 			t[j][0]=1;
 		}
-		for(int i=0; i<t.length; i++) {
+		for(int i=0; i<t[0].length; i++) {
 			t[0][i]=0;
 		}
 		
@@ -45,8 +45,8 @@ public class coinChange {
 	public static void main(String[] args) {
 
 		coinChange c = new coinChange();
-		int[] coins = {1,2,3}; 
-		int sum=5;
+		int[] coins = {1,2,3,4,5,6,7,8}; 
+		int sum=4;
 		System.out.println("Coins: "+Arrays.toString(coins));
 		System.out.println(c.change(coins, sum));
 	}

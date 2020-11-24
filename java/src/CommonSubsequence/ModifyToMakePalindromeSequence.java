@@ -9,10 +9,10 @@ package CommonSubsequence;
  */
 public class ModifyToMakePalindromeSequence {
 	
-	public void  InsertionDeletion(String a, int n) {
+	public void  DeletionInsertion(String a, int n) {
 		int[][] t =new int[n+1][n+1];
 		String b="";
-		int del=0;
+		int del=0, insert=0;
 		for(int i=a.length()-1; i>=0; i--) {
 			b=b+a.charAt(i);
 		}
@@ -37,14 +37,18 @@ public class ModifyToMakePalindromeSequence {
 			}
 		}
 		del=a.length()-t[n][n];
-		System.out.println("Insertion: "+del);
+		insert=a.length()-t[n][n];
+		System.out.println("Deletions  Necessary: "+del);
+		System.out.println("Insertions Necessary: "+insert);
 	}
+	
+	
 	
 	
 	public static void main(String[] args) {
 		ModifyToMakePalindromeSequence m = new ModifyToMakePalindromeSequence();
 		String a="agwqba";
-		int n=a.length();
-		m.InsertionDeletion(a,n);
+		String b="aebcbda";
+		m.DeletionInsertion(a,a.length());
 	}
 }
