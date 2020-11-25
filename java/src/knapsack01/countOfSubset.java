@@ -15,7 +15,7 @@ public class countOfSubset {
 	public int subsetCount(int[] ar, int sum, int n) {
 		int[][] t= new int[ar.length+1][sum+1];
 		
-		for(int i=0; i<t.length; i++) {
+		for(int i=0; i<sum+1; i++) {
 			t[0][i]=0;
 		}
 		for(int j=0; j<t.length; j++) {

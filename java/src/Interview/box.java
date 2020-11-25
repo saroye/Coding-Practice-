@@ -9,7 +9,13 @@ public class box {
 
 	/**
 	 * Given a 2d array of zeros, there may be a rectangle (block) of 1s. 
-	 * Return the top left coordinates of the rectangle. ie. [[0,0,1],[0,0,1],[0,0,1]] returns (2,2)
+	 * Return the top left coordinates of the rectangle. ie. 
+	 * [
+	 * [0,0,1],
+	 * [0,0,1],
+	 * [0,0,1]
+	 * ] 
+	 * returns (2,2)
 	 * 
 	 * The second question was how to solve it if you had to find many rectangles.  
 	 * 

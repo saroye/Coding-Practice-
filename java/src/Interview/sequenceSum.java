@@ -18,6 +18,7 @@ public class sequenceSum {
 			inc=inc+a;
 			System.out.print(inc+", ");
 		}
+		System.out.println();
 		for(int a=j; a>=k; a--) {
 			dec=dec+a;
 			System.out.print(dec+", ");

@@ -34,8 +34,6 @@ public class waysToSum {
 		for(int i=0; i<t.length; i++) {
 			System.out.println(Arrays.toString(t[i]));
 		}
-		
-		
 		return 0;
 	}
 	

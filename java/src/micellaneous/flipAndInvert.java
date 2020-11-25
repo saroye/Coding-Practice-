@@ -2,7 +2,7 @@ package micellaneous;
 
 import java.util.Arrays;
 
-public class mock {
+public class flipAndInvert {
 	/**
 	 * 			[3,5,1,6,2,9,8,null,null,7,4]
 	 * 			[3,5,1,6,7,4,2,null,null,null,null,null,null,9,8]
@@ -33,18 +33,19 @@ public class mock {
 				}
 			}
 		}
-		
 		for(int i=0; i<A.length; i++) {
 			System.out.println(Arrays.toString(A[i]));
 		}
-		
 		return A;
 	}
 	
 	
 	public static void main(String[] args) {
-		mock m = new mock();
-		int[][] ar= new int[][] {{1,1,0,0,1,0,1,1},{1,0,1,0,0},{1,1,0,0,0}};
+		flipAndInvert m = new flipAndInvert();
+		int[][] ar=  {
+				{1,1,0,0,1},
+				{1,0,1,0,0},
+				{1,1,0,0,0}};
 		System.out.println(Arrays.toString(ar[0]));
 		System.out.println(Arrays.toString(ar[1]));
 		System.out.println(Arrays.toString(ar[2]));

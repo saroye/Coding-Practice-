@@ -16,7 +16,6 @@ public class guide {
 			
 		}
 		else {
-			
 			for(int i =1; i<str.length(); i++) {
 				if(str.charAt(i) ==s) {
 					count++;

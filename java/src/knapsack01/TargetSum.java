@@ -1,5 +1,7 @@
 package knapsack01;
 
+import java.util.Arrays;
+
 /**
  * 
  * given an array element, assign a sign (+/-).
@@ -40,6 +42,9 @@ public class TargetSum {
 				}
 			}
 		}
+		for (int j = 0; j < t.length; j++) {
+			System.out.println(Arrays.toString(t[j]));
+		}
 		return t[ar.length][sum];
 	}
 	
@@ -47,7 +52,7 @@ public class TargetSum {
 		
 		TargetSum t = new TargetSum();
 		int[] ar = {1,2,7};
-		t.targetsum(ar,1);
+		System.out.println(t.targetsum(ar,1));
 		
 		
 	}
