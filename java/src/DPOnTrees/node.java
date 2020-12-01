@@ -10,7 +10,7 @@ public class node {
 		this.right=right;
 		this.val=val;
 	}
-	node(int val){
+	public node(int val){
 		this.val=val;
 	}
 	public node getLeft() {

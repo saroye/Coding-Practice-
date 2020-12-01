@@ -1,5 +1,6 @@
 package Interview;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -30,92 +31,81 @@ import java.util.Queue;
  *
  */
 public class videoBuffering {
-	
-	public int videoBuffer(int[] packets, int arrivalRate) {
 
-		int Buffer_size=arrivalRate,
-			buffer_counter=1,
-			last_buffer=0;
-		boolean buffer_good=true;
-			//packet_played=0, 
-			//cur_buffer=0;
-		
-		Queue<Integer> buffer= new LinkedList<Integer>();
-		for(int i=0; i<arrivalRate; i++) {
-			buffer.add(packets[i]);
-		}
-		Buffer_size=(Buffer_size+arrivalRate)-1;
-		Queue<Integer> nxt_buffer=this.updateBuffer(packets, buffer, arrivalRate, Buffer_size, buffer.peek());
-		int len=(packets.length-1)/arrivalRate;
-		
-		for(int i=0; i<len; i++) {
-			System.out.println("Packet: "+i+" : ");
-			for(int j=0; j<arrivalRate; j++) {
-				//System.out.println("buffer size: "+buffer.size());
-				if(buffer.peek()==buffer_counter) {
-					buffer_good=true;
-					last_buffer=buffer.peek();
-					System.out.println(buffer.poll()+" ");
-					buffer_counter++;
-				}
-				else {
-					buffer_good=false;
-				}
-			}
-			if(buffer_good==false) {
-				if(nxt_buffer.peek()==last_buffer+1) {
-					System.out.println("Next from packets: "+nxt_buffer.peek());
-					buffer_counter++;
-				}
-				else {
-					System.out.println("Re-buffering at: "+buffer.peek() );
-					//return buffer.peek();
-				}
-			}
-			else {
-				System.out.println("buffer_counter: "+buffer_counter);
-				buffer=this.updateBuffer(packets, buffer,arrivalRate,Buffer_size,last_buffer);
-				
-				nxt_buffer=this.updateBuffer(packets, buffer, arrivalRate, Buffer_size, buffer.peek());
-			
-				Buffer_size=(Buffer_size+arrivalRate)-1;
-			}
-			System.out.println("Packet: "+i+" has been completed!");
-		}
-		return -1;
-	}
-	
-	public Queue<Integer> updateBuffer(int[] packets, Queue<Integer> old_buffer, int arrivalRate, int count, int last) {
-		
+	public ArrayList<Integer> updateBuffer(int[] packets,  ArrayList<Integer> old_buffer, int arrivalRate, int count, int last) {
 		if(old_buffer.isEmpty()) {
-			
 			for(int i=count;i<packets.length; i++) {
 				if( old_buffer.size()<arrivalRate) {	
 					if(packets[i]>last) {
 						//System.out.println("coming? "+i);
-						old_buffer.add(packets[i]);
-					}
-				}
+						old_buffer.add(packets[i]);}}
 				else {
 					System.out.print("Buffer: ");
 					for(int j : old_buffer) {
-						System.out.print(j+ " ");
-					}
+						System.out.print(j+ " ");}
 					System.out.println();
-					return old_buffer;
-				}
-			}
-		}
+					return old_buffer;}}}
 		return old_buffer;
 	}
+	public int videoBuffer(int[] packets, int arrivalRate) {
+
+		int Buffer_size=arrivalRate;
+		int buffer_counter=1;
+		int last_buffer=0;
+		boolean buffer_good=true;
+		ArrayList<Integer> buffer=new ArrayList<Integer>();
+		Buffer_size=(Buffer_size+arrivalRate)-1;
+		for(int i=0; i<arrivalRate; i++) {
+			buffer.add(packets[i]);
+		}
+		ArrayList<Integer>next_buffer=  this.updateBuffer(packets, buffer, arrivalRate, Buffer_size, buffer.get(Buffer_size));
+		int len=(packets.length-1)/arrivalRate;
+
+		for(int i=0; i<len; i++) {
+			System.out.println("Packet: "+i+" : ");
+			for(int j=0; j<arrivalRate; j++) {
+				//System.out.println("buffer size: "+buffer.size());
+				//				if(buffer.peek()==buffer_counter) {
+				//					buffer_good=true;
+				//					last_buffer=buffer.peek();
+				//					System.out.println(buffer.poll()+" ");
+				//					buffer_counter++;
+				//				}
+				//				else {
+				//					buffer_good=false;
+			}
+		}
+		if(buffer_good==false) {
+			//				if(nxt_buffer.peek()==last_buffer+1) {
+			//					System.out.println("Next from packets: "+nxt_buffer.peek());
+			//					buffer_counter++;
+			//				}
+			//				else {
+			//					//System.out.println("Re-buffering at: "+buffer.peek() );
+			//					//return buffer.peek();
+			//				}
+		}
+		else {
+			System.out.println("buffer_counter: "+buffer_counter);
+			//buffer=this.updateBuffer(packets, buffer,arrivalRate,Buffer_size,last_buffer);
+
+			//	nxt_buffer=this.updateBuffer(packets, buffer, arrivalRate, Buffer_size, buffer.peek());
+
+			Buffer_size=(Buffer_size+arrivalRate)-1;
 	
-	public static void main(String[] args) {
-		
-		videoBuffering v = new videoBuffering();
-		int[] buffer= {1,3,1,2,2,3,3,4};
-		System.out.println("PACKETS: "+Arrays.toString(buffer));
-		System.out.println(v.videoBuffer(buffer, 1));
-		
+		}
+		//System.out.println("Packet: "+i+" has been completed!");
+		return 0;
 	}
+	
+
+public static void main(String[] args) {
+
+	videoBuffering v = new videoBuffering();
+	int[] buffer= {1,3,1,2,2,3,3,4};
+	System.out.println("PACKETS: "+Arrays.toString(buffer));
+	System.out.println(v.videoBuffer(buffer, 1));
+
+}
 
 }
