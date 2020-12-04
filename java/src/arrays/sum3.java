@@ -9,8 +9,7 @@ public class sum3 {
 		Arrays.sort(nums);
 		System.out.println(Arrays.toString(nums));
 		int start=0,end=nums.length-1;
-//		for(int i=0; i<nums.length; i++) {
-//		}
+
 		while(start<end) {
 			int first=nums[start];
 			int second=nums[start+1];
